@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href='./css/style.css'>
+    </head>
+    <body class="center col">
+        <div class="center col border">
+            <input id="username" type=text placeholder="Enter your name...">
+            <div class="center row">
+                <select id="categories">
+                    <option value="" disabled selected hidden>Choose a category...</option>
+                </select>
+                <button id="refresh">New Prompt</button>
+            </div>
+        </div>
+        <div>
+            <span id="prompt">???</span>
+        </div>
+        <div class="center col">
+            <canvas id="visualizer" height="60px"></canvas>
+        </div>
+        <div id="controls" class="center row">
+            <button id="record">Record</button>
+            <button id="stop">Stop</button>
+        </div>
+        <div class="center col border">
+            <div class="center col">
+                <div>
+                    <label for="file">Choose file to upload!</label>
+                    <input type="file" id="file" name="file" accept="audio/wav, audio/mp3"/>
+                </div>
+                <button onclick="upload()">Submit</button>
+            </div>
+        </div>
+        <div id="outputs" class="center col">
+            <div class="center col reverse" id="takes">
+
+            </div>
+        </div>
+    </body>
+    <script src="./js/wave.pcm.js"></script>
+    <script src="./js/utils.js"></script>
+    <script src="./js/app.js"></script>
+</html>
