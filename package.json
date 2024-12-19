@@ -10,7 +10,9 @@
   "author": "Skeletom",
   "license": "MIT",
   "dependencies": {
+    "aws-sdk": "^2.1692.0",
     "dotenv": "^16.4.7",
-    "express": "^4.21.2"
+    "express": "^4.21.2",
+    "express-fileupload": "^1.5.1"
   }
 }

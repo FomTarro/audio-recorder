@@ -164,5 +164,19 @@ function getFileName(){
 }
 
 function upload(){
-    
+    const selectedFile = document.getElementById("file").files[0];
+    console.log(selectedFile);
+    var fd = new FormData();
+    fd.append(selectedFile.name, selectedFile);
+    fetch("/upload", {
+        method: "POST",
+        body: fd
+      }).then(res => {
+        console.log("Request complete! response:", res);
+        if(res.status > 200){
+            // err
+        }else{
+            // ok!
+        }
+      });
 }
